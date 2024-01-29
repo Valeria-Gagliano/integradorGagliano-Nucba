@@ -126,7 +126,6 @@ nav{
 }
 #menu{
     display: flex;
-    
     background-color: var(--bg-white);
     text-align: center;
     list-style-type: none;
@@ -176,6 +175,7 @@ main{
 }
 .cardCateg{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     border: solid;
     border-radius: 10px;
@@ -289,13 +289,17 @@ footer{
 #contacto{
     display: flex;
     background-color: var(--bg-lightblue);
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     width: 87%;
     border-radius: 20px;
     border-style: dashed;
     border-color: #003F62;
     justify-content: space-evenly;
     align-items: center;
+    gap: 1rem;
+}
+#contacto .informacion{
+    padding: 0;
 }
 #correo{
     display: flex;
@@ -324,6 +328,7 @@ footer section{
     font-size: small;
     align-items: center;
     gap: 1rem;
+    text-align: center;
 }
 #redes img{
     height: 7rem;
@@ -359,7 +364,7 @@ footer section{
     align-items: center;
 }
 .center{
-    width: 30%;
+    width: 50%;
     background-color: var(--bg-white);
     border-radius: 20px;
 }
@@ -464,14 +469,19 @@ form .campoTexto {
         flex-direction: column;
         position: absolute;
         top: 7rem;
-        right: 0;
         width: 100%;
-        height: 50vh;
+        height: 40vh;
         justify-content: space-evenly;
         align-items: center;
         text-align: center;
-        display: none;
-        padding-left: 12rem;
+        display: none; 
+        padding-right: 0;
+    }
+    #menu ul{
+       padding: 0;
+    }
+    #menu li{
+        width: 100vw;
     }
     #menu p{
         display: none;
@@ -485,8 +495,11 @@ form .campoTexto {
     }
 
     /*----------- MAIN INDEX-----------*/
-    #portada img{
+    #portada{
         max-width: 90vw;
+    }
+    #portada img{
+        height: 35vw;
     }
     #categorias{
         display: none;
@@ -511,6 +524,12 @@ form .campoTexto {
     }
     /*----------- FOOTER -----------*/
     footer{
+        gap: 6rem;
+        
+    }
+    footer section{
+        display: flex;
+        flex-direction: column-reverse;
         gap: 2rem;
     }
     #contacto{
@@ -521,9 +540,10 @@ form .campoTexto {
     #ayuda, footer section h4{
         display: none;
     }
+    
     /*----------- Inicio de Sesión -----------*/
     .center{
-        width: 50%;
+        width: 60vw;
     }
     .registrarse{
         padding-left: 1rem;
@@ -534,39 +554,38 @@ form .campoTexto {
    
     /*----------- HEADER -----------*/
     nav{
+        
         gap: 0;
         justify-content: center;
         padding: 0;
         width: 100%;
     }
     #encabezado{
+        
         padding-left: 2rem;
     }
     #shopCart{
         display: none;
     }
     #navbar{
-        justify-content: space-between;
-        width: 50%;
+        justify-content: space-evenly;
         position: absolute;
         left: 0;
     }
     #iconMenu{
         position: absolute;
-        right: 2px;
+        right: 5vw;
         bottom: 10%;
     }
     .logo{
         padding: 0.3rem;
     }
-    #menu{
-        padding-left: 5rem;
+    #menu li:last-child a{
+        position: relative;
     }
     /*----------- MAIN INDEX-----------*/
-    #portada img{
-        max-width: 90vw;
-        height: auto;
-    }
+   
+    
     #callToAction button{
         height: 4rem;
         width: 100%;
@@ -584,15 +603,23 @@ form .campoTexto {
         width: 90%;
     }
     /*----------- FOOTER -----------*/
+    footer{
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        
+    }
     iframe{
         display: none;
     }
     #contacto{
         flex-direction: column;
-        height: 15rem;
+        height: 50vh;
         justify-content: space-evenly;
         padding: 0 1rem;
         margin: 0;
+    }
+    #contacto .informacion img {
+        display: none;
     }
     #correo{
         width: 97%;
